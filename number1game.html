@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>NUMBER GAME</title>
+    </head>
+    <body>
+        <h1> Guess The Number</h1>
+        <input id="guessnumber">
+        <button onclick="check()">check</button>
+        <p id ="result">you are wrong /right</p>
+        <p id="score">scroe:10</p>
+        <script>
+            var guessnumber = document.getElementById("guessnumber")
+            var result = document.getElementById("result")
+            var scroe = document.getElementById("score")
+            var randomnumber = Math.floor(Math.random()*10)+1
+            var totalscroe = 10
+            function check()
+            {
+                var enterednumber = guessnumber.Value
+                if(randomnumber==enterednumber)
+                {
+                    console.log("Right")
+                    result.textContent ="Right"
+                    alert("YOU WON....")
+                }
+                else{
+                    totalscroe=totalscroe-1
+                    scroe.textContent ="score:"+totalscroe
+                    result.textContent ="Wrong"
+                }
+            }
+            
+        </script>
+
+    </body>
+</html>
